@@ -2,9 +2,9 @@
 Contributors:      amandato
 Tags:              aws, sdk, amazon, s3, ec2, cloudfront, lambda
 Requires at least: 5.8
-Tested up to:      6.7
+Tested up to:      6.9
 Requires PHP:      8.2
-Stable tag:        3.373.8
+Stable tag:        3.373.9
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -107,8 +107,12 @@ Yes. PHP 8.2 or higher is required. The AWS SDK for PHP 3.x fully supports PHP 8
 
 For the full history see [CHANGELOG.md](https://github.com/mandato-wordpress/aws-sdk/blob/main/CHANGELOG.md).
 
+= 3.373.9 =
+* Updated bundled AWS SDK for PHP to 3.373.9 (released 2026-03-24).
+
 = 3.373.8 =
 * Initial release bundling AWS SDK for PHP 3.373.8 (released 2026-03-23).
+
 
 == Upgrade Notice ==
 
