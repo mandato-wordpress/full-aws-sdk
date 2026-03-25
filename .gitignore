@@ -1,6 +1,3 @@
-# Generator script (only needed locally)
-generate_screenshot.py
-
 # OS / editor
 .DS_Store
 Thumbs.db

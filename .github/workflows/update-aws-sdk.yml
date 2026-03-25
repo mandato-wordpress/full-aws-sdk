@@ -213,7 +213,17 @@ jobs:
               f.write(before + new_cl + '\n' + after)
           PYEOF
 
-      # ── 13. Commit and push directly to main ─────────────────────────────
+      # ── 13. Regenerate screenshot with updated version ────────────────────
+      - name: Regenerate screenshot
+        if: steps.compare.outputs.changed == 'true'
+        env:
+          AWS_SDK_VERSION: ${{ steps.latest.outputs.version }}
+          AWS_SDK_RELEASE_DATE: ${{ steps.release_date.outputs.date }}
+        run: |
+          pip install --quiet pillow
+          python3 scripts/generate_screenshot.py
+
+      # ── 15. Commit and push directly to main ─────────────────────────────
       - name: Commit and push to main
         if: steps.compare.outputs.changed == 'true'
         id: commit
@@ -223,7 +233,7 @@ jobs:
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          git add composer.json composer.lock vendor/ aws-sdk.php readme.txt CHANGELOG.md
+          git add composer.json composer.lock vendor/ aws-sdk.php readme.txt CHANGELOG.md .wordpress-org/screenshot-1.png
           git commit -m "Update AWS SDK for PHP to ${NEW_VERSION}
 
           Automated update triggered by the daily version check workflow.
@@ -238,7 +248,7 @@ jobs:
 
           echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
 
-      # ── 14. Create a published GitHub Release (latest) ────────────────────
+      # ── 16. Create a published GitHub Release (latest) ────────────────────
       - name: Create GitHub Release
         if: steps.compare.outputs.changed == 'true'
         uses: softprops/action-gh-release@v2
