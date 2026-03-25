@@ -2,8 +2,8 @@ name: Update AWS SDK for PHP
 
 on:
   schedule:
-    # Run once a day at 06:00 UTC
-    - cron: '0 6 * * *'
+    # Run every 6 hours
+    - cron: '0 */6 * * *'
   workflow_dispatch: {}   # Allow manual triggers
 
 permissions:

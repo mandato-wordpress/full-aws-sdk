@@ -25,7 +25,7 @@ define( 'AWS_SDK_WP_DIR',          plugin_dir_path( __FILE__ ) );
  * Once loaded, any code in WordPress (plugins, themes) can instantiate
  * AWS SDK clients directly, e.g. new \Aws\S3\S3Client([...])
  */
-if ( file_exists( AWS_SDK_WP_DIR . 'vendor/autoload.php' ) ) {
+if ( ! class_exists( 'Aws\\Sdk' ) && file_exists( AWS_SDK_WP_DIR . 'vendor/autoload.php' ) ) {
     require_once AWS_SDK_WP_DIR . 'vendor/autoload.php';
 }
 
