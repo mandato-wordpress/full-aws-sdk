@@ -1,18 +1,19 @@
-=== AWS SDK for WordPress ===
+=== PHP AWS SDK ===
 Contributors:      amandato
-Tags:              aws, sdk, amazon, s3, ec2, cloudfront, lambda
+Tags:              aws, sdk, s3, ec2, cloudfront
 Requires at least: 5.8
 Tested up to:      6.9
 Requires PHP:      8.2
 Stable tag:        3.374.0
+Donate link: https://github.com/mandato-wordpress/aws-sdk
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
-Bundles the AWS SDK for PHP and exposes its autoloader so any other plugin or theme can use AWS services without managing their own SDK copy.
+Bundles the AWS SDK for PHP and exposes its autoloader so any other plugin or theme can use AWS services without managing their own copy.
 
 == Description ==
 
-**AWS SDK for WordPress** is a lightweight plugin that acts as a shared host for the [AWS SDK for PHP](https://github.com/aws/aws-sdk-php). By activating this single plugin you give your entire WordPress installation access to every AWS service client the SDK supports — no duplicated vendor directories, no version conflicts.
+**PHP AWS SDK** WordPress plugin is a simple plugin that includes a copy of the [AWS SDK for PHP](https://github.com/aws/aws-sdk-php) compatible with PHP 8.2 or newer. By activating this single plugin you give your entire WordPress installation access to every AWS service client the SDK supports — no duplicated vendor directories, no version conflicts.
 
 = How it works =
 
@@ -20,7 +21,7 @@ After activation the plugin registers the Composer-generated autoloader. Any plu
 
 `
 <?php
-if ( defined( 'AWS_SDK_WP_VERSION' ) ) {
+if ( class_exists('Aws\\\\S3\\\\S3Client') ) {
     $s3 = new \Aws\S3\S3Client([
         'region'  => 'us-east-1',
         'version' => 'latest',
@@ -45,18 +46,19 @@ if ( defined( 'AWS_SDK_WP_VERSION' ) ) {
 * **Rekognition** – Image & Video Analysis
 * **Polly** – Text-to-Speech
 * **Translate** – Machine Translation
+* **Bedrock** - Generative AI Using Foundation Models
 
 = Plugin versioning =
 
-The plugin version always matches the bundled AWS SDK for PHP version. A GitHub Actions workflow checks for new SDK releases once per day, automatically commits the updated vendor directory, and publishes a new release.
+The plugin version always matches the bundled AWS SDK for PHP version.
 
 = Developer usage =
 
 **Check that the plugin is active before using the SDK:**
 
 `
-if ( ! defined( 'AWS_SDK_WP_VERSION' ) ) {
-    // Show admin notice asking the user to install AWS SDK for WordPress.
+if ( !class_exists('Aws\\\\Sdk') ) {
+    // Show admin notice asking the user to install PHP AWS SDK plugin.
     return;
 }
 `
@@ -66,7 +68,7 @@ if ( ! defined( 'AWS_SDK_WP_VERSION' ) ) {
 Add the following to your plugin headers so WordPress can warn users when this plugin is missing:
 
 `
-Requires Plugins: aws-sdk
+Requires Plugins: php-aws-sdk
 `
 
 == Installation ==
@@ -97,7 +99,11 @@ The plugin version mirrors the AWS SDK for PHP version. Install the latest plugi
 
 = Will this work with PHP 8.x? =
 
-Yes. PHP 8.2 or higher is required. The AWS SDK for PHP 3.x fully supports PHP 8.2 and 8.3.
+Yes. PHP 8.2 or higher is required. The AWS SDK for PHP 3.x fully supports PHP 8.2 and newer.
+
+= What determines which version of PHP is supported? =
+
+The minimum version requirements are set by the [AWS SDK for PHP](https://github.com/aws/aws-sdk-php), and its dependencies including Symfony. Currently Symfony 7.4 requires PHP 8.2 or newer, which is why PHP 8.2 is currently the minimum version. Symfony 7.4 is an LTS (Long Term Support) edition, and will include bug fixes until  November 2028 and security support until November 2029.
 
 == Screenshots ==
 
