@@ -3,7 +3,7 @@
         'name' => 'mandato-wordpress/full-aws-sdk',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '74002b737235087189f7308f74f8a153ea6062e6',
+        'reference' => '7abe4d570f5e96dae9677410cd25e3dfe6bbe538',
         'type' => 'wordpress-plugin',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -58,7 +58,7 @@
         'mandato-wordpress/full-aws-sdk' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '74002b737235087189f7308f74f8a153ea6062e6',
+            'reference' => '7abe4d570f5e96dae9677410cd25e3dfe6bbe538',
             'type' => 'wordpress-plugin',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

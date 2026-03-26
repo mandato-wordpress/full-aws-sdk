@@ -119,8 +119,8 @@ For the full history see [CHANGELOG.md](https://github.com/mandato-wordpress/aws
 = 3.374.0 =
 * Updated bundled AWS SDK for PHP to 3.374.0 (released 2026-03-25).
 
-= 3.373.9 =
-* Updated bundled AWS SDK for PHP to 3.373.9 (released 2026-03-24).
+= 3.374.0 =
+* Updated bundled AWS SDK for PHP to 3.374.0 (released 2026-03-25).
 
 
 == Upgrade Notice ==
