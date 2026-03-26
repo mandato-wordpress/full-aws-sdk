@@ -8,7 +8,7 @@ from PIL import Image, ImageDraw, ImageFont
 OUT_DIR = Path(__file__).parent.parent / '.wordpress-org'
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 
-TITLE    = 'AWS SDK for WordPress'
+TITLE    = 'Full AWS SDK for WordPress'
 TAGLINE  = 'Bundle the full AWS SDK for PHP — shared across all your plugins & themes'
 
 SERVICES = [
