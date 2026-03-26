@@ -5,7 +5,7 @@ Requires at least: 5.8
 Tested up to:      6.9
 Requires PHP:      8.2
 Stable tag:        3.374.0
-Donate link: https://github.com/mandato-wordpress/aws-sdk
+Donate link:       https://angelo.mandato.com/amazon-web-services/full-aws-sdk-wordpress-plugin/
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -113,7 +113,7 @@ The minimum version requirements are set by the [AWS SDK for PHP](https://github
 
 == Changelog ==
 
-For the full history see [CHANGELOG.md](https://github.com/mandato-wordpress/aws-sdk/blob/main/CHANGELOG.md).
+For the full history see [CHANGELOG.md](https://github.com/mandato-wordpress/full-aws-sdk/blob/main/CHANGELOG.md).
 
 = 3.374.0 =
 * Updated bundled Full AWS SDK plugin for WordPress to 3.374.0 (released 2026-03-25).

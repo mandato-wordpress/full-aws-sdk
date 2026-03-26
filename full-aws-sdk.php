@@ -1,13 +1,13 @@
 <?php
 /**
  * Plugin Name:       Full AWS SDK
- * Plugin URI:        https://github.com/mandato-wordpress/aws-sdk
+ * Plugin URI:        https://angelo.mandato.com/amazon-web-services/full-aws-sdk-wordpress-plugin/
  * Description:       Bundles the AWS SDK for PHP and exposes its autoloader so other plugins and themes can use AWS services without managing their own copy.
  * Version:           3.374.0
  * Requires at least: 5.8
  * Requires PHP:      8.2
- * Author:            amandato
- * Author URI:        https://github.com/mandato-wordpress
+ * Author:            Angelo Mandato
+ * Author URI:        https://angelo.mandato.com/amazon-web-services/full-aws-sdk-wordpress-plugin/
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       full-aws-sdk
