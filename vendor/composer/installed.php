@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
-        'name' => 'mandato-wordpress/aws-sdk',
+        'name' => 'mandato-wordpress/full-aws-sdk',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '4c75b5c3264db5baabd815618e3a58d346434db1',
+        'reference' => '7abe4d570f5e96dae9677410cd25e3dfe6bbe538',
         'type' => 'wordpress-plugin',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -55,10 +55,10 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
-        'mandato-wordpress/aws-sdk' => array(
+        'mandato-wordpress/full-aws-sdk' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '4c75b5c3264db5baabd815618e3a58d346434db1',
+            'reference' => '7abe4d570f5e96dae9677410cd25e3dfe6bbe538',
             'type' => 'wordpress-plugin',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
