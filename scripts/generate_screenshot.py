@@ -37,7 +37,7 @@ f_code   = font('DejaVuSansMono',   13)
 
 # ── Top bar ──────────────────────────────────────────────────────────────────
 draw.rectangle([0, 0, W, 64], fill='#ff9900')
-draw.text((24, 16), 'AWS SDK for PHP  —  WordPress Plugin', font=f_title, fill='#1d2327')
+draw.text((24, 16), 'Full AWS SDK —  WordPress Plugin', font=f_title, fill='#1d2327')
 
 # ── Stat cards ───────────────────────────────────────────────────────────────
 cards = [
@@ -80,7 +80,7 @@ draw.rounded_rectangle([px, py, px + pw, py + ph], radius=8, fill='#0d1117', out
 draw.text((px + 14, py + 12), 'Usage Example', font=f_small, fill='#8c8f94')
 
 code = [
-    ("if ( defined( 'AWS_SDK_WP_VERSION' ) ) {", '#ff7b72'),
+    ("if ( defined( 'FULL_AWS_SDK_VERSION' ) ) {", '#ff7b72'),
     ('',                                          '#e6edf3'),
     ("    $s3 = new Aws\\S3\\S3Client([",         '#79c0ff'),
     ("        'region'  => 'us-east-1',",         '#a5d6ff'),
@@ -100,8 +100,8 @@ for line, col in code:
 
 # ── Footer ────────────────────────────────────────────────────────────────────
 draw.rectangle([0, H - 40, W, H], fill='#2c3338')
-draw.text((24,       H - 28), 'Tools -> AWS SDK  |  mandato-wordpress/aws-sdk', font=f_small, fill='#8c8f94')
-draw.text((W - 370,  H - 28), 'github.com/mandato-wordpress/aws-sdk',           font=f_small, fill='#8c8f94')
+draw.text((24,       H - 28), 'Tools -> Full AWS SDK  |  mandato-wordpress/full-aws-sdk', font=f_small, fill='#8c8f94')
+draw.text((W - 370,  H - 28), 'github.com/mandato-wordpress/full-aws-sdk',           font=f_small, fill='#8c8f94')
 
 OUT.parent.mkdir(parents=True, exist_ok=True)
 img.save(OUT)
