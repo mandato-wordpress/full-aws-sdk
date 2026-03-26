@@ -11,7 +11,7 @@ from PIL import Image, ImageDraw, ImageFont
 
 VERSION      = os.environ.get('AWS_SDK_VERSION',      '3.373.8')
 RELEASE_DATE = os.environ.get('AWS_SDK_RELEASE_DATE', '2026-03-23')
-OUT          = Path(__file__).parent.parent / '.wordpress-org' / 'screenshot-1.png'
+OUT          = Path(__file__).parent.parent / '.wordpress-org' / 'screenshot-2.png'
 
 W, H = 1280, 720
 

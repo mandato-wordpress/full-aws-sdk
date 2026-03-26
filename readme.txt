@@ -1,4 +1,4 @@
-=== PHP AWS SDK ===
+=== Full AWS SDK ===
 Contributors:      amandato
 Tags:              aws, sdk, s3, ec2, cloudfront
 Requires at least: 5.8
@@ -13,7 +13,7 @@ Bundles the AWS SDK for PHP and exposes its autoloader so any other plugin or th
 
 == Description ==
 
-**PHP AWS SDK** WordPress plugin is a simple plugin that includes a copy of the [AWS SDK for PHP](https://github.com/aws/aws-sdk-php) compatible with PHP 8.2 or newer. By activating this single plugin you give your entire WordPress installation access to every AWS service client the SDK supports — no duplicated vendor directories, no version conflicts.
+**Full AWS SDK** is a simple plugin that includes the latest version of the [AWS SDK for PHP](https://github.com/aws/aws-sdk-php) compatible with PHP 8.2 or newer. By activating this single plugin you give your entire WordPress installation access to every AWS service client the SDK supports — no duplicated vendor directories, no version conflicts.
 
 = How it works =
 
@@ -107,7 +107,9 @@ The minimum version requirements are set by the [AWS SDK for PHP](https://github
 
 == Screenshots ==
 
-1. The **Tools → AWS SDK** admin page showing the bundled SDK version, release date, and usage examples.
+1. Full AWS SDK information page in the WordPress Admin > Tools menu.
+2. The **Tools → AWS SDK** admin page showing the bundled SDK version, release date, and usage examples.
+
 
 == Changelog ==
 
