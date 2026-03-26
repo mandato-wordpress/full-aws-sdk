@@ -71,7 +71,7 @@ jobs:
           SDK_CHANGED=false
           WP_CHANGED=false
 
-          if [ ${{ github.event_name }} == 'workflow_dispatch' ]; then
+          if [ "${{ github.event_name }}"" == "workflow_dispatch" ]; then
             SDK_CHANGED=true
             echo "Workflow Manually run, forcing SDK update."
           fi
