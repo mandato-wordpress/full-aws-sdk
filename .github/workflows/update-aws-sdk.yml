@@ -1,4 +1,4 @@
-name: Update AWS SDK for PHP
+name: Update Full AWS SDK
 
 on:
   schedule:
@@ -40,7 +40,7 @@ jobs:
       - name: Get current plugin version
         id: current
         run: |
-          CURRENT=$(grep "^define( 'AWS_SDK_WP_VERSION'" aws-sdk.php \
+          CURRENT=$(grep "^define( 'FULL_AWS_SDK_VERSION'" full-aws-sdk.php \
             | sed "s/.*'\([0-9.]*\)'.*/\1/")
           echo "version=$CURRENT" >> "$GITHUB_OUTPUT"
           echo "Current plugin version: $CURRENT"
@@ -142,13 +142,13 @@ jobs:
         run: |
           sed -i \
             "s/^\( \* Version:.*\)$/\ * Version:           $NEW_VERSION/" \
-            aws-sdk.php
+            full-aws-sdk.php
           sed -i \
-            "s/^define( 'AWS_SDK_WP_VERSION'.*$/define( 'AWS_SDK_WP_VERSION',     '$NEW_VERSION' );/" \
-            aws-sdk.php
+            "s/^define( 'FULL_AWS_SDK_VERSION'.*$/define( 'FULL_AWS_SDK_VERSION',     '$NEW_VERSION' );/" \
+            full-aws-sdk.php
           sed -i \
-            "s/^define( 'AWS_SDK_WP_RELEASE_DATE'.*$/define( 'AWS_SDK_WP_RELEASE_DATE', '$RELEASE_DATE' );/" \
-            aws-sdk.php
+            "s/^define( 'FULL_AWS_SDK_RELEASE_DATE'.*$/define( 'FULL_AWS_SDK_RELEASE_DATE', '$RELEASE_DATE' );/" \
+            full-aws-sdk.php
 
       # ── 12. Update CHANGELOG.md and readme.txt ────────────────────────────
       - name: Update CHANGELOG.md and readme.txt
@@ -233,7 +233,7 @@ jobs:
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          git add composer.json composer.lock vendor/ aws-sdk.php readme.txt CHANGELOG.md .wordpress-org/screenshot-1.png
+          git add composer.json composer.lock vendor/ full-aws-sdk.php readme.txt CHANGELOG.md .wordpress-org/screenshot-1.png
           git commit -m "Update AWS SDK for PHP to ${NEW_VERSION}
 
           Automated update triggered by the daily version check workflow.
@@ -259,7 +259,7 @@ jobs:
             Bundles **AWS SDK for PHP ${{ steps.latest.outputs.version }}** (released ${{ steps.release_date.outputs.date }}).
 
             ### Installation
-            Download `aws-sdk.zip` below and install via **Plugins → Add New → Upload Plugin** in WordPress.
+            Download `full-aws-sdk.zip` below and install via **Plugins → Add New → Upload Plugin** in WordPress.
 
             ### Changes in this SDK version
             See the [AWS SDK for PHP changelog](https://github.com/aws/aws-sdk-php/blob/master/CHANGELOG.md) for the full list of changes.
