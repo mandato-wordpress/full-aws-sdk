@@ -66,6 +66,7 @@ jobs:
 
       # ── 6. Exit early if nothing changed ──────────────────────────────────
       - name: Compare versions
+        if: ${{ github.event_name != 'workflow_dispatch' }}
         id: compare
         run: |
           SDK_CHANGED=false
@@ -88,6 +89,14 @@ jobs:
             echo "No changes detected – exiting early."
           fi
 
+      # ── 6a. Continue anyway ───────────────────────────────────────────────
+      - name: Compare versions 
+        if: ${{ github.event_name == 'workflow_dispatch' }}
+        id: compare-
+        run: |
+          echo "We are updating manually, continuing..."
+          echo "changed=true"  >> "$GITHUB_OUTPUT"
+        
       # ── 7. Set up PHP + Composer ──────────────────────────────────────────
       - name: Set up PHP
         if: steps.compare.outputs.changed == 'true'
