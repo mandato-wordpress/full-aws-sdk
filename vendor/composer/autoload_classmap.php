@@ -1189,6 +1189,8 @@ return array(
     'Aws\\TrustedAdvisor\\Exception\\TrustedAdvisorException' => $vendorDir . '/aws/aws-sdk-php/src/TrustedAdvisor/Exception/TrustedAdvisorException.php',
     'Aws\\TrustedAdvisor\\TrustedAdvisorClient' => $vendorDir . '/aws/aws-sdk-php/src/TrustedAdvisor/TrustedAdvisorClient.php',
     'Aws\\UserAgentMiddleware' => $vendorDir . '/aws/aws-sdk-php/src/UserAgentMiddleware.php',
+    'Aws\\Uxc\\Exception\\UxcException' => $vendorDir . '/aws/aws-sdk-php/src/Uxc/Exception/UxcException.php',
+    'Aws\\Uxc\\UxcClient' => $vendorDir . '/aws/aws-sdk-php/src/Uxc/UxcClient.php',
     'Aws\\VPCLattice\\Exception\\VPCLatticeException' => $vendorDir . '/aws/aws-sdk-php/src/VPCLattice/Exception/VPCLatticeException.php',
     'Aws\\VPCLattice\\VPCLatticeClient' => $vendorDir . '/aws/aws-sdk-php/src/VPCLattice/VPCLatticeClient.php',
     'Aws\\VerifiedPermissions\\Exception\\VerifiedPermissionsException' => $vendorDir . '/aws/aws-sdk-php/src/VerifiedPermissions/Exception/VerifiedPermissionsException.php',
