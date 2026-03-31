@@ -5,7 +5,7 @@
     "license": "GPL-2.0-or-later",
     "require": {
         "php": "^8.2",
-        "aws/aws-sdk-php": "3.374.2",
+        "aws/aws-sdk-php": "3.375.0",
         "symfony/filesystem": "^7.3"
     },
     "config": {

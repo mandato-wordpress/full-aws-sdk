@@ -4,7 +4,7 @@ namespace Aws\S3\S3Transfer\Progress;
 
 use Throwable;
 
-final class TransferProgressSnapshot
+final class DirectoryTransferProgressSnapshot
 {
     /** @var string */
     private string $identifier;
@@ -15,29 +15,32 @@ final class TransferProgressSnapshot
     /** @var int */
     private int $totalBytes;
 
+    /** @var int */
+    private int $transferredFiles;
+
+    /** @var int */
+    private int $totalFiles;
+
     /** @var array|null */
-    private array|null $response;
+    private ?array $response;
 
     /** @var Throwable|string|null */
     private Throwable|string|null $reason;
 
-    /**
-     * @param string $identifier
-     * @param int $transferredBytes
-     * @param int $totalBytes
-     * @param array|null $response
-     * @param Throwable|string|null $reason
-     */
     public function __construct(
         string $identifier,
         int $transferredBytes,
         int $totalBytes,
+        int $transferredFiles,
+        int $totalFiles,
         ?array $response = null,
         Throwable|string|null $reason = null,
     ) {
         $this->identifier = $identifier;
         $this->transferredBytes = $transferredBytes;
         $this->totalBytes = $totalBytes;
+        $this->transferredFiles = $transferredFiles;
+        $this->totalFiles = $totalFiles;
         $this->response = $response;
         $this->reason = $reason;
     }
@@ -47,93 +50,107 @@ final class TransferProgressSnapshot
         return $this->identifier;
     }
 
-    /**
-     * @return int
-     */
     public function getTransferredBytes(): int
     {
         return $this->transferredBytes;
     }
 
-    /**
-     * @return int
-     */
     public function getTotalBytes(): int
     {
         return $this->totalBytes;
     }
 
-    /**
-     * @return array|null
-     */
-    public function getResponse(): array|null
+    public function getTransferredFiles(): int
+    {
+        return $this->transferredFiles;
+    }
+
+    public function getTotalFiles(): int
+    {
+        return $this->totalFiles;
+    }
+
+    public function getResponse(): ?array
     {
         return $this->response;
     }
 
-    /**
-     * @return float
-     */
     public function ratioTransferred(): float
     {
         if ($this->totalBytes === 0) {
-            // Unable to calculate ratio
             return 0;
         }
 
         return $this->transferredBytes / $this->totalBytes;
     }
 
-    /**
-     * @return Throwable|string|null
-     */
     public function getReason(): Throwable|string|null
     {
         return $this->reason;
     }
 
-    /**
-     * @return array
-     */
     public function toArray(): array
     {
         return [
             'identifier' => $this->identifier,
             'transferredBytes' => $this->transferredBytes,
             'totalBytes' => $this->totalBytes,
-            'reason' => $this->reason,
+            'transferredFiles' => $this->transferredFiles,
+            'totalFiles' => $this->totalFiles,
             'response' => $this->response,
+            'reason' => $this->reason,
         ];
     }
 
-    /**
-     * @param array $response
-     *
-     * @return TransferProgressSnapshot
-     */
-    public function withResponse(array $response): TransferProgressSnapshot
+    public function withResponse(array $response): DirectoryTransferProgressSnapshot
     {
         return new self(
             $this->identifier,
             $this->transferredBytes,
             $this->totalBytes,
+            $this->transferredFiles,
+            $this->totalFiles,
             $response,
+            $this->reason,
         );
     }
 
-    /**
-     * @param array $data
-     *
-     * @return TransferProgressSnapshot
-     */
-    public static function fromArray(array $data): TransferProgressSnapshot
+    public function withTotals(int $totalBytes, int $totalFiles): DirectoryTransferProgressSnapshot
     {
         return new self(
-            $data['identifier'] ?? null,
+            $this->identifier,
+            $this->transferredBytes,
+            $totalBytes,
+            $this->transferredFiles,
+            $totalFiles,
+            $this->response,
+            $this->reason,
+        );
+    }
+
+    public function withProgress(int $transferredBytes, int $transferredFiles): DirectoryTransferProgressSnapshot
+    {
+        return new self(
+            $this->identifier,
+            $transferredBytes,
+            $this->totalBytes,
+            $transferredFiles,
+            $this->totalFiles,
+            $this->response,
+            $this->reason,
+        );
+    }
+
+    public static function fromArray(array $data): DirectoryTransferProgressSnapshot
+    {
+        return new self(
+            $data['identifier'] ?? '',
             $data['transferredBytes'] ?? 0,
             $data['totalBytes'] ?? 0,
+            $data['transferredFiles'] ?? 0,
+            $data['totalFiles'] ?? 0,
             $data['response'] ?? null,
-            $data['reason'] ?? null
+            $data['reason'] ?? null,
         );
     }
 }
