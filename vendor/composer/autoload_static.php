@@ -1034,6 +1034,8 @@ class ComposerStaticInitcf97c5c21f96dff26d039c142be64f5e
         'Aws\\S3Control\\EndpointArnMiddleware' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/S3Control/EndpointArnMiddleware.php',
         'Aws\\S3Control\\Exception\\S3ControlException' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/S3Control/Exception/S3ControlException.php',
         'Aws\\S3Control\\S3ControlClient' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/S3Control/S3ControlClient.php',
+        'Aws\\S3Files\\Exception\\S3FilesException' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/S3Files/Exception/S3FilesException.php',
+        'Aws\\S3Files\\S3FilesClient' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/S3Files/S3FilesClient.php',
         'Aws\\S3Outposts\\Exception\\S3OutpostsException' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/S3Outposts/Exception/S3OutpostsException.php',
         'Aws\\S3Outposts\\S3OutpostsClient' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/S3Outposts/S3OutpostsClient.php',
         'Aws\\S3Tables\\Exception\\S3TablesException' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/S3Tables/Exception/S3TablesException.php',

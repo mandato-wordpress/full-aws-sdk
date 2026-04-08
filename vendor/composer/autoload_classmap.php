@@ -951,6 +951,8 @@ return array(
     'Aws\\S3Control\\EndpointArnMiddleware' => $vendorDir . '/aws/aws-sdk-php/src/S3Control/EndpointArnMiddleware.php',
     'Aws\\S3Control\\Exception\\S3ControlException' => $vendorDir . '/aws/aws-sdk-php/src/S3Control/Exception/S3ControlException.php',
     'Aws\\S3Control\\S3ControlClient' => $vendorDir . '/aws/aws-sdk-php/src/S3Control/S3ControlClient.php',
+    'Aws\\S3Files\\Exception\\S3FilesException' => $vendorDir . '/aws/aws-sdk-php/src/S3Files/Exception/S3FilesException.php',
+    'Aws\\S3Files\\S3FilesClient' => $vendorDir . '/aws/aws-sdk-php/src/S3Files/S3FilesClient.php',
     'Aws\\S3Outposts\\Exception\\S3OutpostsException' => $vendorDir . '/aws/aws-sdk-php/src/S3Outposts/Exception/S3OutpostsException.php',
     'Aws\\S3Outposts\\S3OutpostsClient' => $vendorDir . '/aws/aws-sdk-php/src/S3Outposts/S3OutpostsClient.php',
     'Aws\\S3Tables\\Exception\\S3TablesException' => $vendorDir . '/aws/aws-sdk-php/src/S3Tables/Exception/S3TablesException.php',

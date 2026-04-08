@@ -4,7 +4,7 @@ Tags:              aws, sdk, s3, ec2, cloudfront
 Requires at least: 5.8
 Tested up to:      6.9
 Requires PHP:      8.2
-Stable tag:        3.376.4
+Stable tag:        3.377.0
 Donate link:       https://angelo.mandato.com/amazon-web-services/full-aws-sdk-wordpress-plugin/
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
@@ -115,14 +115,14 @@ The minimum version requirements are set by the [AWS SDK for PHP](https://github
 
 For the full history see [CHANGELOG.md](https://github.com/mandato-wordpress/full-aws-sdk/blob/main/CHANGELOG.md).
 
+= 3.377.0 =
+* Updated bundled Full AWS SDK plugin for WordPress to 3.377.0 (released 2026-04-07).
+
 = 3.376.4 =
 * Updated bundled Full AWS SDK plugin for WordPress to 3.376.4 (released 2026-04-06).
 
 = 3.376.3 =
 * Updated bundled Full AWS SDK plugin for WordPress to 3.376.3 (released 2026-04-03).
-
-= 3.376.2 =
-* Updated bundled Full AWS SDK plugin for WordPress to 3.376.2 (released 2026-04-02).
 
 
 == Upgrade Notice ==
