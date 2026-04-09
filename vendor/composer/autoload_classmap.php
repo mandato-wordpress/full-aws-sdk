@@ -744,6 +744,8 @@ return array(
     'Aws\\MarketplaceCommerceAnalytics\\MarketplaceCommerceAnalyticsClient' => $vendorDir . '/aws/aws-sdk-php/src/MarketplaceCommerceAnalytics/MarketplaceCommerceAnalyticsClient.php',
     'Aws\\MarketplaceDeployment\\Exception\\MarketplaceDeploymentException' => $vendorDir . '/aws/aws-sdk-php/src/MarketplaceDeployment/Exception/MarketplaceDeploymentException.php',
     'Aws\\MarketplaceDeployment\\MarketplaceDeploymentClient' => $vendorDir . '/aws/aws-sdk-php/src/MarketplaceDeployment/MarketplaceDeploymentClient.php',
+    'Aws\\MarketplaceDiscovery\\Exception\\MarketplaceDiscoveryException' => $vendorDir . '/aws/aws-sdk-php/src/MarketplaceDiscovery/Exception/MarketplaceDiscoveryException.php',
+    'Aws\\MarketplaceDiscovery\\MarketplaceDiscoveryClient' => $vendorDir . '/aws/aws-sdk-php/src/MarketplaceDiscovery/MarketplaceDiscoveryClient.php',
     'Aws\\MarketplaceEntitlementService\\Exception\\MarketplaceEntitlementServiceException' => $vendorDir . '/aws/aws-sdk-php/src/MarketplaceEntitlementService/Exception/MarketplaceEntitlementServiceException.php',
     'Aws\\MarketplaceEntitlementService\\MarketplaceEntitlementServiceClient' => $vendorDir . '/aws/aws-sdk-php/src/MarketplaceEntitlementService/MarketplaceEntitlementServiceClient.php',
     'Aws\\MarketplaceMetering\\Exception\\MarketplaceMeteringException' => $vendorDir . '/aws/aws-sdk-php/src/MarketplaceMetering/Exception/MarketplaceMeteringException.php',

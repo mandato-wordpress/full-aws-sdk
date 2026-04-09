@@ -827,6 +827,8 @@ class ComposerStaticInitcf97c5c21f96dff26d039c142be64f5e
         'Aws\\MarketplaceCommerceAnalytics\\MarketplaceCommerceAnalyticsClient' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/MarketplaceCommerceAnalytics/MarketplaceCommerceAnalyticsClient.php',
         'Aws\\MarketplaceDeployment\\Exception\\MarketplaceDeploymentException' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/MarketplaceDeployment/Exception/MarketplaceDeploymentException.php',
         'Aws\\MarketplaceDeployment\\MarketplaceDeploymentClient' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/MarketplaceDeployment/MarketplaceDeploymentClient.php',
+        'Aws\\MarketplaceDiscovery\\Exception\\MarketplaceDiscoveryException' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/MarketplaceDiscovery/Exception/MarketplaceDiscoveryException.php',
+        'Aws\\MarketplaceDiscovery\\MarketplaceDiscoveryClient' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/MarketplaceDiscovery/MarketplaceDiscoveryClient.php',
         'Aws\\MarketplaceEntitlementService\\Exception\\MarketplaceEntitlementServiceException' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/MarketplaceEntitlementService/Exception/MarketplaceEntitlementServiceException.php',
         'Aws\\MarketplaceEntitlementService\\MarketplaceEntitlementServiceClient' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/MarketplaceEntitlementService/MarketplaceEntitlementServiceClient.php',
         'Aws\\MarketplaceMetering\\Exception\\MarketplaceMeteringException' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/MarketplaceMetering/Exception/MarketplaceMeteringException.php',

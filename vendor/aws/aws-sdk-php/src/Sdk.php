@@ -494,6 +494,8 @@ namespace Aws;
  * @method \Aws\MultiRegionClient createMultiRegionMarketplaceCommerceAnalytics(array $args = [])
  * @method \Aws\MarketplaceDeployment\MarketplaceDeploymentClient createMarketplaceDeployment(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionMarketplaceDeployment(array $args = [])
+ * @method \Aws\MarketplaceDiscovery\MarketplaceDiscoveryClient createMarketplaceDiscovery(array $args = [])
+ * @method \Aws\MultiRegionClient createMultiRegionMarketplaceDiscovery(array $args = [])
  * @method \Aws\MarketplaceEntitlementService\MarketplaceEntitlementServiceClient createMarketplaceEntitlementService(array $args = [])
  * @method \Aws\MultiRegionClient createMultiRegionMarketplaceEntitlementService(array $args = [])
  * @method \Aws\MarketplaceMetering\MarketplaceMeteringClient createMarketplaceMetering(array $args = [])
@@ -849,7 +851,7 @@ namespace Aws;
  */
 class Sdk
 {
-    const VERSION = '3.377.0';
+    const VERSION = '3.378.0';
 
     /** @var array Arguments for creating clients */
     private $args;
