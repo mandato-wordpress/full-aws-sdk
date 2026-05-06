@@ -3,7 +3,7 @@
  * Plugin Name:       Full AWS SDK
  * Plugin URI:        https://angelo.mandato.com/amazon-web-services/full-aws-sdk-wordpress-plugin/
  * Description:       Bundles the AWS SDK for PHP and exposes its autoloader so other plugins and themes can use AWS services without managing their own copy.
- * Version:           3.380.0
+ * Version:           3.380.1
  * Requires at least: 5.8
  * Requires PHP:      8.2
  * Author:            Angelo Mandato
@@ -15,8 +15,8 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'FULL_AWS_SDK_VERSION',     '3.380.0' );
-define( 'FULL_AWS_SDK_RELEASE_DATE', '2026-05-04' );
+define( 'FULL_AWS_SDK_VERSION',     '3.380.1' );
+define( 'FULL_AWS_SDK_RELEASE_DATE', '2026-05-05' );
 define( 'FULL_AWS_SDK_FILE',         __FILE__ );
 define( 'FULL_AWS_SDK_DIR',          plugin_dir_path( __FILE__ ) );
 
